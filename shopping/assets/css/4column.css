@@ -1,0 +1,111 @@
+/* General layout for the product grid */
+.category-product .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    width: 1130px;
+    /* border: 1px solid rgb(172, 19, 19); */
+}
+
+/* Set the columns to 4 per row */
+.category-product .col-sm-6.col-md-4 {
+    flex: 0 0 25%; /* 100 / 4 = 25%, 4 columns */
+    max-width: 25%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+/* Product card styling */
+.product {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+}
+
+.product:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image settings */
+.product-image .image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 300px;
+    /* border: 1px solid red; */
+
+}
+
+/* Product name styling */
+.product-info .name a {
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    
+}
+
+.product-info .name a:hover {
+    color: #007bff;
+}
+
+/* Price and discount styling */
+.product-price .price {
+    text-align: center;
+    font-size: 18px;
+    color: #28a745;
+}
+
+.product-price .price-before-discount {
+    font-size: 14px;
+    /* color: #888; */
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+/* Add to cart button styling */
+.add-cart-button .btn-info {
+    background-color:  #000000;
+    color: #fff;
+    transition:  background-color 0.3s ease;
+}
+
+.add-cart-button .btn-info:hover {
+    background-color: #202020;
+}
+
+/* Wishlist icon */
+.lnk.wishlist .icon {
+    font-size: 18px;
+    color: #ff6f61;
+}
+
+.lnk.wishlist .icon:hover {
+    color: #ff3b2e;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 1200px) {
+    .category-product .col-sm-6.col-md-4 {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-product .col-sm-6.col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .category-product .col-sm-6.col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
